@@ -9,6 +9,7 @@ import CheckoutForm from "./components/CheckoutForm";
 import "./App.css";
 
 function App() {
+  // testing codegrade setup
   // array of plants that have been added to the cart
   const [cart, setCart] = useState([]);
 
