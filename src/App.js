@@ -9,7 +9,6 @@ import CheckoutForm from "./components/CheckoutForm";
 import "./App.css";
 
 function App() {
-  // testing codegrade setup
   // array of plants that have been added to the cart
   const [cart, setCart] = useState([]);
 
@@ -28,7 +27,7 @@ function App() {
       <Router>
         <nav className="container">
           <h1>
-            React Plants <span role="img">🌿</span>
+            React Plants <span role="img" aria-label='leaf emoji'>🌿</span>
           </h1>
           <ul className="steps">
             <li>

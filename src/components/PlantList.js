@@ -5,7 +5,7 @@ export default class PlantList extends Component {
   constructor(){
     super();
     this.state = {
-      plants: []
+      plants: [],
     }
   }
   // add state with a property called "plants" - initialize as an empty array
@@ -17,9 +17,13 @@ export default class PlantList extends Component {
   componentDidMount() {
     axios.get('http://localhost:3333/plants')
       .then(res => {
-        this.setState(this.state.plants)
+        console.log(res)
+        this.setState({
+         ...this.state,
+          plants: res.data
+        })
       })
-      .catch(err => {'error'});
+      .catch(err => console.log(err));
   }
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
